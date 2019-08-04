@@ -403,7 +403,7 @@ def compute_fpa_welfare(bidders, anonymous_reserve, points=1000):
                     if j_value < i_value or (j_value == i_value and j < i):
                         j_losing_prob += probs[j][j_value_idx]
                 winning_prob *= j_losing_prob
-                wel += winning_prob * i_value
+            wel += winning_prob * i_value
     return wel
 
 
@@ -480,4 +480,3 @@ def compute_spa_welfare(bidders, anonymous_reserve):
                 p *= sum(losing_prob)
             wel += p * bidders[i].values[i_value_idx]
     return wel
-
